@@ -11,9 +11,6 @@ design <- FrF2(nruns = 64, nfactors = 10)
 
 # View the design
 print(design)
-
-#
-# Generating a Plackett-Burman design using the DoE.base package
 #
 # Generate a Plackett-Burman design with specific number of runs and factors
 nruns <- 12    # Number of runs (should be a multiple of 4)
