@@ -1,0 +1,35 @@
+---
+title: "R Notebook for computing p-values of t and F distribution"
+Myer EX 2.3 and 2.4
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+# F p value cdf_value <- pf(q, df1, df2)
+cdf_value <- 1- pf(3.98, 2, 11)
+
+# t p value cdf_value <- pt(q, df1)
+cdf_value <- 1- pt(4.15, 11)
+
+# Critical F value for F test, assuming alpha=0.05
+critical_F <- qf(0.95, 2, 11)
+critical_F
+
+# Critical t value for t test, assuming alpha=0.05, two sided
+critical_t <- qt(0.975, 11)
+critical_t
+
+
